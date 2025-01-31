@@ -8,7 +8,7 @@
       body {
         font-family: "Arial", sans-serif;
         line-height: 1.6;
-        max-width: 800px;
+        max-width: 100%;
         margin: 0 auto;
         padding: 20px;
         background-color: #121212;
@@ -16,9 +16,11 @@
       }
       .card {
         background-color: #1e1e1e;
-        padding: 2rem;
+        padding: 1rem;
         border-radius: 10px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        max-width: 100%;
+        margin: 0 auto;
       }
       .profile-section {
         text-align: center;
@@ -26,16 +28,17 @@
         padding: 20px;
       }
       .profile-img {
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
         border-radius: 50%;
         margin-bottom: 1rem;
         border: 2px solid #e0e0e0;
       }
       .social-links {
         display: flex;
-        justify-content: center;
-        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
         margin: 1rem 0;
       }
       .social-links a {
@@ -45,6 +48,12 @@
         border: 1px solid #e0e0e0;
         border-radius: 20px;
         transition: all 0.3s ease;
+        width: 90%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
       }
       .social-links a:hover {
         background-color: #e0e0e0;
@@ -52,6 +61,24 @@
       }
       .section {
         margin-bottom: 2rem;
+      }
+
+      @media (min-width: 600px) {
+        .card {
+          padding: 2rem;
+          max-width: 600px;
+        }
+        .profile-img {
+          width: 150px;
+          height: 150px;
+        }
+        .social-links {
+          flex-direction: row;
+          justify-content: center;
+        }
+        .social-links a {
+          width: auto;
+        }
       }
     </style>
   </head>
@@ -72,12 +99,46 @@
       </div>
 
       <div class="social-links">
-        <a href="https://linkedin.com/in/ivan-kyuchukov" target="_blank"
-          >LinkedIn</a
-        >
-        <a href="https://business.ivankyu.com" target="_blank">Blog</a>
-        <a href="https://medium.com/@ivankyu" target="_blank">Medium</a>
-        <a href="https://x.com/0xIvan_Q" target="_blank">X.com</a>
+        <a href="https://linkedin.com/in/ivan-kyuchukov" target="_blank">
+          <img
+            src="public/linkedin-icon.svg"
+            alt="LinkedIn"
+            width="20"
+            height="20"
+          />
+          LinkedIn
+        </a>
+        <a href="https://business.ivankyu.com" target="_blank">
+          <img
+            src="public/business-blog-icon.jpg"
+            alt="Blog"
+            width="20"
+            height="20"
+          />
+          Blog
+        </a>
+        <a href="https://medium.com/@ivankyu" target="_blank">
+          <img
+            src="public/medium-icon.webp"
+            alt="Medium"
+            width="20"
+            height="20"
+          />
+          Medium
+        </a>
+        <a href="https://x.com/0xIvan_Q" target="_blank">
+          <img src="public/x-icon.jpeg" alt="X" width="20" height="20" />
+          X.com
+        </a>
+        <a href="mailto:vaka.stz@gmail.com">
+          <img
+            src="public/at-symbol-icon.png"
+            alt="Email"
+            width="20"
+            height="20"
+          />
+          Email
+        </a>
       </div>
     </div>
   </body>
