@@ -1,0 +1,7 @@
+# robots.txt for ivankyu.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://ivankyu.com/sitemap.xml

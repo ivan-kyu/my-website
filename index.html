@@ -3,162 +3,368 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ivan Kyuchukov's Space</title>
+    <title>Ivan Kyu | AI Solutions Architect & MVP Builder</title>
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ivankyu.com/" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="public/business-blog-icon.jpg" type="image/jpeg" />
+    
+    <!-- Primary Meta Tags -->
+    <meta name="description" content="Software engineer turned entrepreneur. I help founders ship AI-powered MVPs in 2 weeks. Building Augmentica Labs from Bali." />
+    <meta name="keywords" content="Ivan Kyu, Ivan Kyuchukov, AI Solutions, MVP Development, AI Automation, Software Engineer, Augmentica Labs, Digital Nomad, Vibe Coding" />
+    <meta name="author" content="Ivan Kyuchukov" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ivankyu.com/" />
+    <meta property="og:title" content="Ivan Kyu | AI Solutions Architect & MVP Builder" />
+    <meta property="og:description" content="Software engineer turned entrepreneur. I help founders ship AI-powered MVPs in 2 weeks. Building Augmentica Labs from Bali." />
+    <meta property="og:image" content="https://ivankyu.com/public/ivan-kyu.jpeg" />
+    <meta property="og:site_name" content="Ivan Kyu" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://ivankyu.com/" />
+    <meta name="twitter:title" content="Ivan Kyu | AI Solutions Architect & MVP Builder" />
+    <meta name="twitter:description" content="Software engineer turned entrepreneur. I help founders ship AI-powered MVPs in 2 weeks. Building Augmentica Labs from Bali." />
+    <meta name="twitter:image" content="https://ivankyu.com/public/ivan-kyu.jpeg" />
+    <meta name="twitter:creator" content="@ivan_cre8s" />
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ivan Kyuchukov",
+      "alternateName": "Ivan Kyu",
+      "url": "https://ivankyu.com",
+      "image": "https://ivankyu.com/public/ivan-kyu.jpeg",
+      "jobTitle": "AI Solutions Architect",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Augmentica Labs",
+        "url": "https://augmenticalabs.com"
+      },
+      "description": "Software engineer turned entrepreneur. Building AI solutions that create freedom.",
+      "sameAs": [
+        "https://linkedin.com/in/ivan-kyuchukov",
+        "https://x.com/ivan_cre8s",
+        "https://medium.com/@ivankyu"
+      ]
+    }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
     <style>
+      :root {
+        --bg-primary: #0a0a0b;
+        --bg-card: #141416;
+        --text-primary: #f5f5f7;
+        --text-secondary: #8e8e93;
+        --accent: #3b82f6;
+        --accent-hover: #2563eb;
+        --border: rgba(255, 255, 255, 0.08);
+        --glow: rgba(59, 130, 246, 0.15);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
       body {
-        font-family: "Arial", sans-serif;
+        font-family: "Instrument Sans", -apple-system, BlinkMacSystemFont, sans-serif;
         line-height: 1.6;
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #121212;
-        color: #e0e0e0;
-      }
-      .card {
-        background-color: #1e1e1e;
-        padding: 1rem;
-        border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-        max-width: 100%;
-        margin: 0 auto;
-      }
-      .profile-section {
-        text-align: center;
-        margin-bottom: 2rem;
-        padding: 20px;
-      }
-      .profile-img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        margin-bottom: 1rem;
-        border: 2px solid #e0e0e0;
-      }
-      .social-links {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-        margin: 1rem 0;
-      }
-      .social-links a {
-        color: #e0e0e0;
-        text-decoration: none;
-        padding: 0.5rem 1rem;
-        border: 1px solid #e0e0e0;
-        border-radius: 20px;
-        transition: all 0.3s ease;
-        width: 90%;
-        text-align: center;
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        min-height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 0.5rem;
+        padding: 20px;
+        background-image: 
+          radial-gradient(ellipse at top, rgba(59, 130, 246, 0.03) 0%, transparent 50%),
+          radial-gradient(ellipse at bottom right, rgba(139, 92, 246, 0.02) 0%, transparent 50%);
       }
-      .social-links a:hover {
-        background-color: #e0e0e0;
-        color: #121212;
+
+      .card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 2.5rem 2rem;
+        max-width: 480px;
+        width: 100%;
+        backdrop-filter: blur(20px);
+        box-shadow: 
+          0 0 0 1px rgba(255, 255, 255, 0.02),
+          0 20px 50px -10px rgba(0, 0, 0, 0.5);
       }
-      .section {
+
+      .profile-section {
+        text-align: center;
         margin-bottom: 2rem;
+      }
+
+      .profile-img {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        margin-bottom: 1.5rem;
+        border: 3px solid var(--border);
+        object-fit: cover;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .profile-img:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 30px var(--glow);
+      }
+
+      h1 {
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        letter-spacing: -0.02em;
+      }
+
+      .tagline {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        letter-spacing: 0.02em;
+      }
+
+      .bio {
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+        line-height: 1.7;
+        max-width: 380px;
+        margin: 0 auto;
+      }
+
+      .divider {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--border), transparent);
+        margin: 2rem 0;
+      }
+
+      .agency-section {
+        text-align: center;
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background: rgba(59, 130, 246, 0.05);
+        border-radius: 16px;
+        border: 1px solid rgba(59, 130, 246, 0.1);
+      }
+
+      .agency-title {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.75rem;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 0.75rem;
+      }
+
+      .agency-headline {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .agency-desc {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        line-height: 1.6;
+      }
+
+      .agency-buttons {
+        display: flex;
+        gap: 0.75rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.25rem;
+        border-radius: 12px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        cursor: pointer;
+      }
+
+      .btn-primary {
+        background: var(--accent);
+        color: white;
+        border: none;
+      }
+
+      .btn-primary:hover {
+        background: var(--accent-hover);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 20px var(--glow);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+      }
+
+      .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.15);
+      }
+
+      .social-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+      }
+
+      .social-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.4rem;
+        padding: 0.6rem 1rem;
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.85rem;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        transition: all 0.2s ease;
+      }
+
+      .social-link:hover {
+        color: var(--text-primary);
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.15);
+        transform: translateY(-1px);
+      }
+
+      .social-link svg {
+        width: 16px;
+        height: 16px;
+        opacity: 0.8;
+      }
+
+      .social-link:hover svg {
+        opacity: 1;
       }
 
       @media (min-width: 600px) {
         .card {
-          padding: 2rem;
-          max-width: 600px;
+          padding: 3rem;
         }
+
         .profile-img {
-          width: 150px;
-          height: 150px;
+          width: 180px;
+          height: 180px;
         }
-        .social-links {
-          flex-direction: row;
-          justify-content: center;
+
+        h1 {
+          font-size: 2rem;
         }
-        .social-links a {
-          width: auto;
+
+        .tagline {
+          font-size: 0.85rem;
         }
       }
+
+      /* Subtle entrance animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .card {
+        animation: fadeIn 0.5s ease-out;
+      }
     </style>
-    <link rel="icon" href="public/business-blog-icon.jpg" type="image/jpeg" />
-    <meta
-      name="description"
-      content="Ivan Kyuchukov's personal website. Software Engineer passionate about tech, AI, travel, longevity, self-improvement and sharing knowledge through writing."
-    />
-    <meta
-      name="keywords"
-      content="Ivan Kyuchukov, Software Engineer, Tech, AI, Travel, Longevity, Self-improvement, Writing"
-    />
-    <meta name="author" content="Ivan Kyuchukov" />
-    <meta property="og:title" content="Ivan Kyuchukov's Space" />
-    <meta
-      property="og:description"
-      content="Software Engineer passionate about tech, AI, travel, longevity, self-improvement and sharing knowledge through writing."
-    />
-    <meta property="og:image" content="public/ivan-kyu.jpeg" />
-    <meta property="og:url" content="https://ivankyu.com" />
-    <meta name="twitter:card" content="public/ivan-kyu.jpeg" />
-    <meta name="twitter:image" content="public/ivan-kyu.jpeg" />
   </head>
   <body>
-    <div class="card">
-      <div class="profile-section">
+    <main class="card">
+      <section class="profile-section">
         <img
           src="public/ivan-kyu.jpeg"
-          alt="Profile Picture"
+          alt="Ivan Kyuchukov - AI Solutions Architect"
           class="profile-img"
+          loading="eager"
         />
-        <h1>Ivan Kyuchukov</h1>
-        <h2>Overthinker</h2>
-        <p>
-          Software Engineer passionate about tech, AI, travel, longevity,
-          self-improvement and sharing knowledge through writing.
+        <h1>Ivan Kyu</h1>
+        <p class="tagline">Agency Owner | Software Engineer | AI Builder</p>
+        <p class="bio">
+          Software engineer turned entrepreneur. I left the 9-5 to build AI solutions that create freedom. Currently crafting MVPs, automations, and AI Voice Agents for founders who want to ship fast and boost sales.
         </p>
-      </div>
+      </section>
 
-      <div class="social-links">
-        <a href="https://linkedin.com/in/ivan-kyuchukov" target="_blank">
-          <img
-            src="public/linkedin-icon.svg"
-            alt="LinkedIn"
-            width="20"
-            height="20"
-          />
+      <div class="divider"></div>
+
+      <section class="agency-section">
+        <p class="agency-title">Augmentica Labs</p>
+        <h2 class="agency-headline">Need an MVP built fast?</h2>
+        <p class="agency-desc">
+          I help founders ship AI-powered products in 2 weeks.<br/>
+          I help Sales teams boost performance with AI Voice Agents.
+        </p>
+        <div class="agency-buttons">
+          <a href="https://calendly.com/ivan-kyu/30min" target="_blank" rel="noopener" class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            Book a Call
+          </a>
+          <a href="https://augmenticalabs.com" target="_blank" rel="noopener" class="btn btn-secondary">
+            View Agency
+          </a>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <nav class="social-links" aria-label="Social media links">
+        <a href="https://linkedin.com/in/ivan-kyuchukov" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
           LinkedIn
         </a>
-        <a href="https://business.ivankyu.com" target="_blank">
-          <img
-            src="public/business-blog-icon.jpg"
-            alt="Blog"
-            width="20"
-            height="20"
-          />
-          Blog
-        </a>
-        <a href="https://medium.com/@ivankyu" target="_blank">
-          <img
-            src="public/medium-icon.webp"
-            alt="Medium"
-            width="20"
-            height="20"
-          />
-          Medium
-        </a>
-        <a href="https://x.com/0xIvan_Q" target="_blank">
-          <img src="public/x-icon.jpeg" alt="X" width="20" height="20" />
+        <a href="https://x.com/ivan_cre8s" target="_blank" rel="noopener" class="social-link" aria-label="X (Twitter)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           X.com
         </a>
-        <a href="mailto:vaka.stz@gmail.com">
-          <img
-            src="public/at-symbol-icon.png"
-            alt="Email"
-            width="20"
-            height="20"
-          />
+        <a href="https://business.ivankyu.com" target="_blank" rel="noopener" class="social-link" aria-label="Blog">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+          Blog
+        </a>
+        <a href="mailto:vaka.stz@gmail.com" class="social-link" aria-label="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
           Email
         </a>
-      </div>
-    </div>
+        <a href="https://medium.com/@ivankyu" target="_blank" rel="noopener" class="social-link" aria-label="Medium">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+          Medium
+        </a>
+      </nav>
+    </main>
   </body>
 </html>
